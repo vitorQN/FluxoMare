@@ -1,8 +1,51 @@
 
+import { useRef } from "react";
+
 function App() {
+  const collectionTrackRef = useRef(null);
+
+  const scrollCollection = (direction) => {
+    const track = collectionTrackRef.current;
+
+    if (!track) {
+      return;
+    }
+
+    const card = track.querySelector(".product-card");
+    const gap = 28;
+    const cardWidth = card ? card.offsetWidth + gap : track.clientWidth;
+
+    track.scrollBy({
+      left: direction * cardWidth,
+      behavior: "smooth",
+    });
+  };
 
   const products = [
     {
+      name: "Maré",
+      price: "R$ 149,00",
+      image:
+        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Brisa",
+      price: "R$ 129,00",
+      image:
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Onda",
+      price: "R$ 169,00",
+      image:
+        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Corrente",
+      price: "R$ 139,00",
+      image:
+        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop",
+    },{
       name: "Maré",
       price: "R$ 149,00",
       image:
@@ -32,12 +75,12 @@ function App() {
     {
       title: "Sustentável",
       description: "Materiais ecológicos e produção consciente.",
-      icon: "🍃",
+      icon: "♻️",
     },
     {
       title: "Feito no Brasil",
       description: "Valorizamos o que é nosso e quem faz com propósito.",
-      icon: "🇧🇷",
+      icon: "🌎",
     },
     {
       title: "Design Autoral",
@@ -73,6 +116,9 @@ function App() {
             </a>
             <a href="#about" className="hover:text-black transition">
               sobre
+            </a>
+            <a href="#history" className="hover:text-black transition">
+              nossa história
             </a>
             <a href="#sustainability" className="hover:text-black transition">
               sustentabilidade
@@ -110,9 +156,9 @@ function App() {
               Ecobags que acompanham o seu fluxo e respeitam a maré.
             </p>
 
-            <button>
+            <a href="#collection" className="hero-button">
               Conheça a Coleção
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -136,9 +182,9 @@ function App() {
             utilizando materiais sustentáveis e produção responsável.
           </p>
 
-          <button className="about-button">
+          <a href="#history" className="about-button">
             Saiba Mais
-          </button>
+          </a>
         </div>
 
         <div className="about-image">
@@ -163,34 +209,98 @@ function App() {
               </h3>
             </div>
 
-            <button>
-              Ver Todos
-            </button>
           </div>
 
-          <div className="products-grid">
-            {products.map((product) => (
-              <div
-                key={product.name}
-                className="product-card"
+          <div className="collection-carousel">
+            <div className="carousel-controls">
+              <button
+                type="button"
+                aria-label="Produto anterior"
+                onClick={() => scrollCollection(-1)}
               >
-                <div className="product-image">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                  />
+                ‹
+              </button>
+
+              <button
+                type="button"
+                aria-label="Próximo produto"
+                onClick={() => scrollCollection(1)}
+              >
+                ›
+              </button>
+            </div>
+
+            <div className="products-grid" ref={collectionTrackRef}>
+              {products.map((product, index) => (
+                <div
+                  key={`${product.name}-${index}`}
+                  className="product-card"
+                >
+                  <div className="product-image">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                    />
+                  </div>
+
+                  <div className="product-info">
+                    <h4>
+                      {product.name}
+                    </h4>
+
+                    <p>{product.price}</p>
+                  </div>
+
                 </div>
 
-                <div className="product-info">
-                  <h4>
-                    {product.name}
-                  </h4>
-
-                  <p>{product.price}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* History */}
+      <section id="history">
+        <div className="history-content">
+          <p>
+            nossa história
+          </p>
+
+          <h3>
+            Feita no ritmo da maré
+          </h3>
+
+          <p className="history-description">
+            A Fluxo Maré começou como um desejo simples: criar peças bonitas,
+            úteis e mais conscientes para acompanhar a rotina de quem vive em
+            movimento. Entre praias, feiras e conversas com artesãs brasileiras,
+            transformamos retalhos, fibras naturais e ideias leves em ecobags
+            pensadas para durar.
+          </p>
+
+          <div className="history-details">
+            <div>
+              <strong>2026</strong>
+              <span>primeiras peças autorais</span>
+            </div>
+
+            <div>
+              <strong>Brasil</strong>
+              <span>produção local e cuidadosa</span>
+            </div>
+
+            <div>
+              <strong>Oceano</strong>
+              <span>inspiração para cada coleção</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="history-image">
+          <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop"
+            alt="Mesa de criação com tecidos naturais"
+          />
         </div>
       </section>
 
