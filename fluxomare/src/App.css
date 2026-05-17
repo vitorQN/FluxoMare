@@ -97,6 +97,43 @@ nav a:hover {
   color: black;
 }
 
+.mobile-menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d4c7bb;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(248, 243, 238, 0.9);
+  transition: 0.3s;
+}
+
+.mobile-menu-button span {
+  width: 18px;
+  height: 1px;
+  background: #625b56;
+  transition: 0.3s ease;
+}
+
+.mobile-menu-button.is-open span:first-child {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-button.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.is-open span:last-child {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+}
+
 /* ===== HERO SECTION ===== */
 
 .hero-section {
@@ -428,6 +465,92 @@ nav a:hover {
   color: #8b8178;
 }
 
+/* ===== CATALOGO ===== */
+
+#catalogo {
+  max-width: 1280px;
+  margin: auto;
+  padding: 120px 40px;
+}
+
+.catalogo-header {
+  max-width: 720px;
+  margin-bottom: 58px;
+}
+
+.catalogo-header > p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: #9b8d84;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.catalogo-header h3 {
+  color: #5d5753;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.catalogo-description {
+  color: #7b736d;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.catalogo-card {
+  background: #f8f3ee;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.35s ease;
+}
+
+.catalogo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.11);
+}
+
+.catalogo-image {
+  overflow: hidden;
+}
+
+.catalogo-image img {
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.catalogo-card:hover .catalogo-image img {
+  transform: scale(1.05);
+}
+
+.catalogo-info {
+  padding: 22px;
+}
+
+.catalogo-info h4 {
+  color: #5c5652;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.catalogo-info p {
+  color: #857b73;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
 /* ===== HISTORY ===== */
 
 #history {
@@ -664,6 +787,10 @@ footer .socials span:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .product-card {
     flex-basis: calc((100% - 28px) / 2);
   }
@@ -680,6 +807,7 @@ footer .socials span:hover {
 
   #about h3,
   .history-content h3,
+  .catalogo-header h3,
   .collection-header h3 {
     font-size: 44px;
   }
@@ -691,12 +819,68 @@ footer .socials span:hover {
 }
 
 @media (max-width: 768px) {
-  nav {
+  .desktop-nav {
     display: none;
+  }
+
+  header > div {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    letter-spacing: 0.22em;
+  }
+
+  header p {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(246, 241, 235, 0.98);
+    border-bottom: 1px solid #e7ddd2;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease, visibility 0.25s ease;
+  }
+
+  .mobile-menu.is-open {
+    max-height: 420px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu a {
+    padding: 18px 24px;
+    border-top: 1px solid #e7ddd2;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #625b56;
   }
 
   #sustainability,
   footer > div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -740,11 +924,13 @@ footer .socials span:hover {
 
   #about h3,
   .history-content h3,
+  .catalogo-header h3,
   .collection-header h3 {
     font-size: 36px;
   }
 
   #about,
+  #catalogo,
   #history {
     gap: 40px;
     padding-top: 80px;
@@ -794,6 +980,7 @@ footer .socials span:hover {
   header > div,
   #about,
   #collection,
+  #catalogo,
   #history,
   #sustainability,
   footer > div:first-child {

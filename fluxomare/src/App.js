@@ -1,8 +1,9 @@
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function App() {
   const collectionTrackRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollCollection = (direction) => {
     const track = collectionTrackRef.current;
@@ -71,6 +72,39 @@ function App() {
     },
   ];
 
+  const catalogItems = [
+    {
+      name: "Capinhas",
+      description: "Proteção para celular com estampas inspiradas no mar.",
+      image:
+        "https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Bolsas",
+      description: "Bolsas leves para praia, rotina e movimento.",
+      image:
+        "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Camisetas",
+      description: "Básicos confortáveis com identidade Fluxo Maré.",
+      image:
+        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Shorts",
+      description: "Modelagens práticas para dias solares.",
+      image:
+        "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Calças",
+      description: "Peças fluidas para acompanhar todos os fluxos.",
+      image:
+        "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop",
+    },
+  ];
+
   const features = [
     {
       title: "Sustentável",
@@ -110,9 +144,12 @@ function App() {
             </p>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest">
+          <nav className="desktop-nav hidden md:flex items-center gap-8 text-sm uppercase tracking-widest">
             <a href="#collection" className="hover:text-black transition">
               coleção
+            </a>
+            <a href="#catalogo" className="hover:text-black transition">
+              catálogo
             </a>
             <a href="#about" className="hover:text-black transition">
               sobre
@@ -127,7 +164,44 @@ function App() {
               contato
             </a>
           </nav>
+
+          <button
+            type="button"
+            className={`mobile-menu-button ${isMenuOpen ? "is-open" : ""}`}
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+
+        <nav
+          id="mobile-menu"
+          className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}
+        >
+          <a href="#collection" onClick={() => setIsMenuOpen(false)}>
+            cole&ccedil;&atilde;o
+          </a>
+          <a href="#catalogo" onClick={() => setIsMenuOpen(false)}>
+            cat&aacute;logo
+          </a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+            sobre
+          </a>
+          <a href="#history" onClick={() => setIsMenuOpen(false)}>
+            nossa hist&oacute;ria
+          </a>
+          <a href="#sustainability" onClick={() => setIsMenuOpen(false)}>
+            sustentabilidade
+          </a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            contato
+          </a>
+        </nav>
       </header>
 
       {/* Hero */}
@@ -256,6 +330,51 @@ function App() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Catalogo */}
+      <section id="catalogo">
+        <div className="catalogo-header">
+          <p>
+            catálogo
+          </p>
+
+          <h3>
+            Produtos para o seu fluxo
+          </h3>
+
+          <p className="catalogo-description">
+            Explore as categorias da Fluxo Maré: capinhas, bolsas, camisetas,
+            shorts e calças pensadas para movimento, conforto e estilo.
+          </p>
+        </div>
+
+        <div className="catalogo-grid">
+          {catalogItems.map((item) => (
+            <a
+              key={item.name}
+              href="#collection"
+              className="catalogo-card"
+            >
+              <div className="catalogo-image">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                />
+              </div>
+
+              <div className="catalogo-info">
+                <h4>
+                  {item.name}
+                </h4>
+
+                <p>
+                  {item.description}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
