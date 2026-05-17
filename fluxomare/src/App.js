@@ -154,6 +154,9 @@ function App() {
             <a href="#about" className="hover:text-black transition">
               sobre
             </a>
+            <a href="#piaui" className="hover:text-black transition">
+              Piau&iacute;
+            </a>
             <a href="#history" className="hover:text-black transition">
               nossa história
             </a>
@@ -191,6 +194,9 @@ function App() {
           </a>
           <a href="#about" onClick={() => setIsMenuOpen(false)}>
             sobre
+          </a>
+          <a href="#piaui" onClick={() => setIsMenuOpen(false)}>
+            Piau&iacute;
           </a>
           <a href="#history" onClick={() => setIsMenuOpen(false)}>
             nossa hist&oacute;ria
@@ -237,6 +243,8 @@ function App() {
         </div>
       </section>
 
+      <div className="wave-lines wave-lines-light" aria-hidden="true"></div>
+
       {/* About */}
       <section
         id="about"
@@ -268,6 +276,8 @@ function App() {
           />
         </div>
       </section>
+
+      <div className="wave-lines" aria-hidden="true"></div>
 
       {/* Collection */}
       <section id="collection">
@@ -333,6 +343,8 @@ function App() {
         </div>
       </section>
 
+      <div className="wave-lines wave-lines-soft" aria-hidden="true"></div>
+
       {/* Catalogo */}
       <section id="catalogo">
         <div className="catalogo-header">
@@ -375,6 +387,44 @@ function App() {
               </div>
             </a>
           ))}
+        </div>
+      </section>
+
+      {/* Piaui */}
+      <section id="piaui" className="piaui-section">
+        <video
+          className="piaui-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop"
+        >
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div className="piaui-overlay"></div>
+
+        <div className="piaui-content">
+          <p>
+            criada no litoral do Piau&iacute;
+          </p>
+
+          <h3>
+            Onde o vento encontra a mar&eacute;
+          </h3>
+
+          <p>
+            A Fluxo Mar&eacute; carrega a leveza do Piau&iacute;: dunas, sol,
+            rio, oceano e o ritmo calmo de quem cria perto da natureza.
+          </p>
+
+          <a href="#about">
+            conhecer a origem
+          </a>
         </div>
       </section>
 
@@ -444,6 +494,15 @@ function App() {
           </div>
         ))}
       </section>
+
+      <a
+        href="#catalogo"
+        className="floating-bag"
+        aria-label="Abrir catálogo"
+      >
+        <span className="floating-bag-handle"></span>
+        <span className="floating-bag-body"></span>
+      </a>
 
       {/* Footer */}
       <footer id="contact">
