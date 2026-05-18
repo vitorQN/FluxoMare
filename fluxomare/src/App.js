@@ -1,10 +1,38 @@
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as images from "./assets/img";
 
 function App() {
   const collectionTrackRef = useRef(null);
+  const historyContentRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHistoryContentVisible, setIsHistoryContentVisible] = useState(false);
+
+  useEffect(() => {
+    const historyContent = historyContentRef.current;
+
+    if (!historyContent) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsHistoryContentVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.25,
+      }
+    );
+
+    observer.observe(historyContent);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const scrollCollection = (direction) => {
     const track = collectionTrackRef.current;
@@ -348,7 +376,7 @@ function App() {
           </p>
 
           <h3>
-            Produtos para o seu fluxo
+            Produtos Para o Seu Fluxo
           </h3>
 
           <p className="catalogo-description">
@@ -411,13 +439,18 @@ function App() {
 
       {/* History */}
       <section id="history">
-        <div className="history-content">
+        <div
+          ref={historyContentRef}
+          className={`history-content scroll-fade-in ${
+            isHistoryContentVisible ? "is-visible" : ""
+          }`}
+        >
           <p>
             nossa história
           </p>
 
           <h3>
-            Feita no ritmo da maré
+            Feita no Ritmo da Maré
           </h3>
 
           <p className="history-description">

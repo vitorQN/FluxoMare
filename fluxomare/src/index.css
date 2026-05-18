@@ -28,6 +28,26 @@ body {
   font-weight: var(--font-weight-regular);
   background: #f6f1eb;
   color: #5f5a56;
+  scrollbar-width: thin;
+  scrollbar-color: #b9aa9c #f6f1eb;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f1eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9baad;
+  border: 3px solid #f6f1eb;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9f9186;
 }
 
 h1,
@@ -79,4 +99,3 @@ pre {
 .font-mono {
   font-family: var(--font-mono);
 }
-
