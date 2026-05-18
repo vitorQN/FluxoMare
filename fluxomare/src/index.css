@@ -1,7 +1,82 @@
+/* ===== FONT SETUP ===== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-logo: Futura, "Trebuchet MS", Arial, sans-serif;
+  --font-apoio: Inter, Arial, sans-serif;
+  --font-textos: Poppins, Arial, sans-serif;
+
+  --font-mono: "Courier New", Courier, monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
   background: #f6f1eb;
   color: #5f5a56;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-logo);
+  font-weight: var(--font-weight-medium);
+}
+
+p,
+li,
+strong {
+  font-family: var(--font-textos);
+}
+
+span,
+a{
+  font-family: var(--font-apoio);
+}
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-apoio);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
 }
 

@@ -1,5 +1,6 @@
 
 import { useRef, useState } from "react";
+import * as images from "./assets/img";
 
 function App() {
   const collectionTrackRef = useRef(null);
@@ -215,7 +216,7 @@ function App() {
         className="hero-section"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop')",
+            `url(${images.foto1})`,
         }}
       >
         <div className="hero-overlay"></div>
@@ -243,8 +244,6 @@ function App() {
         </div>
       </section>
 
-      <div className="wave-lines wave-lines-light" aria-hidden="true"></div>
-
       {/* About */}
       <section
         id="about"
@@ -271,13 +270,11 @@ function App() {
 
         <div className="about-image">
           <img
-            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+            src={images.foto5}
             alt="Woman with eco bag"
           />
         </div>
       </section>
-
-      <div className="wave-lines" aria-hidden="true"></div>
 
       {/* Collection */}
       <section id="collection">
@@ -343,8 +340,6 @@ function App() {
         </div>
       </section>
 
-      <div className="wave-lines wave-lines-soft" aria-hidden="true"></div>
-
       {/* Catalogo */}
       <section id="catalogo">
         <div className="catalogo-header">
@@ -392,20 +387,6 @@ function App() {
 
       {/* Piaui */}
       <section id="piaui" className="piaui-section">
-        <video
-          className="piaui-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop"
-        >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4"
-            type="video/mp4"
-          />
-        </video>
-
         <div className="piaui-overlay"></div>
 
         <div className="piaui-content">
@@ -467,7 +448,7 @@ function App() {
 
         <div className="history-image">
           <img
-            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop"
+            src={images.nossaHistoria}
             alt="Mesa de criação com tecidos naturais"
           />
         </div>
@@ -556,9 +537,42 @@ function App() {
             </div>
 
             <div className="socials">
-              <span>◎</span>
-              <span>◉</span>
-              <span>✉</span>
+              <a
+                href="https://www.instagram.com/claudio_henri00/"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" />
+                </svg>
+              </a>
+
+              <a
+                href="https://twitter.com/"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 4l11.2 16H20L8.8 4H4z" />
+                  <path d="M4.5 20L20 4" />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/"
+                aria-label="TikTok"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 4v10.2a4.3 4.3 0 1 1-3.6-4.2" />
+                  <path d="M14 4c.4 3.2 2.2 5 5 5.4" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
