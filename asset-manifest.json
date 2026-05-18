@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "/FluxoMare/static/css/main.b98ca834.css",
-    "main.js": "/FluxoMare/static/js/main.c50e1aab.js",
+    "main.css": "/FluxoMare/static/css/main.a1d6bdb9.css",
+    "main.js": "/FluxoMare/static/js/main.280c93fe.js",
     "static/js/453.22ef79b9.chunk.js": "/FluxoMare/static/js/453.22ef79b9.chunk.js",
+    "static/media/IMG_0039.JPG.jpeg": "/FluxoMare/static/media/IMG_0039.JPG.52f2f940033fe09d4c73.jpeg",
+    "static/media/IMG_0038.JPG.jpeg": "/FluxoMare/static/media/IMG_0038.JPG.9e15f0929cd5d2c82c17.jpeg",
+    "static/media/foto2.jpeg": "/FluxoMare/static/media/foto2.59fe1a656d9e5d530e8f.jpeg",
+    "static/media/foto3.jpeg": "/FluxoMare/static/media/foto3.4119dbf8ec262018d0c7.jpeg",
+    "static/media/foto5.jpeg": "/FluxoMare/static/media/foto5.b07ef2b0f8f9927ea897.jpeg",
+    "static/media/foto4.jpeg": "/FluxoMare/static/media/foto4.591182a6370e8d93336d.jpeg",
+    "static/media/nossahistoria.jpeg": "/FluxoMare/static/media/nossahistoria.1a839aa1d9db92164c47.jpeg",
+    "static/media/foto1.jpeg": "/FluxoMare/static/media/foto1.3f0f0cfe465e2e176f0e.jpeg",
+    "static/media/IMG_0033.JPG.jpeg": "/FluxoMare/static/media/IMG_0033.JPG.eb056379cff332f60a96.jpeg",
+    "static/media/IMG_0035.JPG.jpeg": "/FluxoMare/static/media/IMG_0035.JPG.25c01ac6b9e6d5f7414c.jpeg",
+    "static/media/IMG_0022.JPG.jpeg": "/FluxoMare/static/media/IMG_0022.JPG.1dab024c8296977d0abe.jpeg",
     "index.html": "/FluxoMare/index.html",
-    "main.b98ca834.css.map": "/FluxoMare/static/css/main.b98ca834.css.map",
-    "main.c50e1aab.js.map": "/FluxoMare/static/js/main.c50e1aab.js.map",
+    "main.a1d6bdb9.css.map": "/FluxoMare/static/css/main.a1d6bdb9.css.map",
+    "main.280c93fe.js.map": "/FluxoMare/static/js/main.280c93fe.js.map",
     "453.22ef79b9.chunk.js.map": "/FluxoMare/static/js/453.22ef79b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b98ca834.css",
-    "static/js/main.c50e1aab.js"
+    "static/css/main.a1d6bdb9.css",
+    "static/js/main.280c93fe.js"
   ]
 }
