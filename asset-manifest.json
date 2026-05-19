@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FluxoMare/static/css/main.a627c050.css",
+    "main.css": "/FluxoMare/static/css/main.3d1d4a30.css",
     "main.js": "/FluxoMare/static/js/main.43399d2c.js",
     "static/js/453.22ef79b9.chunk.js": "/FluxoMare/static/js/453.22ef79b9.chunk.js",
     "static/media/foto1.png": "/FluxoMare/static/media/foto1.beabaf37c805080fd116.png",
@@ -25,12 +25,12 @@
     "static/media/IMG_0035.JPG.jpeg": "/FluxoMare/static/media/IMG_0035.JPG.25c01ac6b9e6d5f7414c.jpeg",
     "static/media/IMG_0022.JPG.jpeg": "/FluxoMare/static/media/IMG_0022.JPG.1dab024c8296977d0abe.jpeg",
     "index.html": "/FluxoMare/index.html",
-    "main.a627c050.css.map": "/FluxoMare/static/css/main.a627c050.css.map",
+    "main.3d1d4a30.css.map": "/FluxoMare/static/css/main.3d1d4a30.css.map",
     "main.43399d2c.js.map": "/FluxoMare/static/js/main.43399d2c.js.map",
     "453.22ef79b9.chunk.js.map": "/FluxoMare/static/js/453.22ef79b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a627c050.css",
+    "static/css/main.3d1d4a30.css",
     "static/js/main.43399d2c.js"
   ]
 }
