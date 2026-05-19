@@ -1020,6 +1020,11 @@ footer .socials a:nth-child(2) svg path:last-child {
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 1024px) {
+
+  .desktop-nav {
+    display: none;
+  }
+  
   #sustainability,
   footer > div:first-child {
     grid-template-columns: repeat(2, 1fr);
@@ -1050,42 +1055,7 @@ footer .socials a:nth-child(2) svg path:last-child {
     font-size: 44px;
   }
 
-  .piaui-content h3 {
-    font-size: 58px;
-  }
-
-  #about img,
-  .history-image img {
-    height: 520px;
-  }
-}
-
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  header > div {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  header h1 {
-    font-size: 20px;
-    letter-spacing: 0.22em;
-  }
-
-  header p {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-  }
-
-  .header-logo img {
-    width: 54px;
-    height: 54px;
-  }
-
-  .mobile-menu-button {
+   .mobile-menu-button {
     display: inline-flex;
     flex: 0 0 auto;
   }
@@ -1121,6 +1091,39 @@ footer .socials a:nth-child(2) svg path:last-child {
     text-transform: uppercase;
     color: #625b56;
   }
+
+  .piaui-content h3 {
+    font-size: 58px;
+  }
+
+  #about img,
+  .history-image img {
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header > div {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    letter-spacing: 0.22em;
+  }
+
+  header p {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  .header-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
 
   .piaui-section {
     min-height: 560px;
