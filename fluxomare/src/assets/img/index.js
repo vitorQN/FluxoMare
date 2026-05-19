@@ -8,6 +8,8 @@ import img0033 from "./IMG_0033.JPG.jpeg";
 import img0035 from "./IMG_0035.JPG.jpeg";
 import img0038 from "./IMG_0038.JPG.jpeg";
 import img0039 from "./IMG_0039.JPG.jpeg";
+import logo from "./logo.png";
+import logoazul from "./logoazul.png"
 import nossaHistoria from "./nossahistoria.jpeg";
 
 import foto31 from "./produtos/foto31.png"; 
@@ -30,6 +32,7 @@ export {
   img0035,
   img0038,
   img0039,
+  logo,
   nossaHistoria,
   foto31,
   foto32,
@@ -39,5 +42,6 @@ export {
   foto36,
   foto37,
   foto38,
+  logoazul,
 
 };

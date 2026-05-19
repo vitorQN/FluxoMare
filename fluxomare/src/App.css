@@ -53,15 +53,28 @@ header {
 header > div {
   max-width: 1280px;
   margin: auto;
-  padding: 22px 40px;
+  padding: 22px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 header button {
   font-size: 26px;
   color: #6b625b;
+}
+
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.header-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 header h1 {
@@ -82,6 +95,7 @@ header p {
 
 nav {
   display: flex;
+  margin-left: 120px;
   gap: 35px;
 }
 
@@ -1066,6 +1080,11 @@ footer .socials a:nth-child(2) svg path:last-child {
     letter-spacing: 0.18em;
   }
 
+  .header-logo img {
+    width: 54px;
+    height: 54px;
+  }
+
   .mobile-menu-button {
     display: inline-flex;
     flex: 0 0 auto;
@@ -1158,6 +1177,10 @@ footer .socials a:nth-child(2) svg path:last-child {
 
   .hero-text {
     padding: 40px 0;
+  }
+
+  .hero-logo {
+    display: none;
   }
 
   .hero-text p:first-child {

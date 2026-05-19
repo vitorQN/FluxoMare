@@ -162,7 +162,9 @@ function App() {
       {/* Header */}
       <header className="fixed top-0 left-0 w-full z-50 bg-[#f6f1eb]/80 backdrop-blur-md border-b border-[#e6ddd3]">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
-          
+          <div className="header-logo">
+            <img src={images.logoazul} alt="Fluxo Mare logo" />
+          </div>
 
           <div className="text-center">
             <h1 className="text-2xl tracking-[0.4em] uppercase text-[#67605c]">
@@ -182,9 +184,6 @@ function App() {
             </a>
             <a href="#about" className="hover:text-black transition">
               sobre
-            </a>
-            <a href="#piaui" className="hover:text-black transition">
-              Piau&iacute;
             </a>
             <a href="#history" className="hover:text-black transition">
               nossa história
@@ -269,6 +268,7 @@ function App() {
               Conheça a Coleção
             </a>
           </div>
+
         </div>
       </section>
 
