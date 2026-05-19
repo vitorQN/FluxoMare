@@ -57,7 +57,12 @@ h4,
 h5,
 h6 {
   font-family: var(--font-logo);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
+  
+}
+
+h3 {
+  text-transform: uppercase;
 }
 
 p,

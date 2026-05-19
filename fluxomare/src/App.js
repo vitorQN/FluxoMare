@@ -56,81 +56,81 @@ function App() {
       name: "Maré",
       price: "R$ 149,00",
       image:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
+        `${images.foto31}`,
     },
     {
       name: "Brisa",
       price: "R$ 129,00",
       image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+        `${images.foto32}`,
     },
     {
       name: "Onda",
       price: "R$ 169,00",
       image:
-        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop",
+        `${images.foto35}`,
     },
     {
       name: "Corrente",
       price: "R$ 139,00",
       image:
-        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop",
+        `${images.foto33}`,
     },{
       name: "Maré",
       price: "R$ 149,00",
       image:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
+        `${images.foto34}`,
     },
     {
       name: "Brisa",
       price: "R$ 129,00",
       image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+        `${images.foto36}`,
     },
     {
       name: "Onda",
       price: "R$ 169,00",
       image:
-        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop",
+        `${images.foto37}`,
     },
     {
       name: "Corrente",
       price: "R$ 139,00",
       image:
-        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop",
+        `${images.foto38}`,
     },
   ];
 
   const catalogItems = [
     {
-      name: "Capinhas",
+      name: "Acessórios",
       description: "Proteção para celular com estampas inspiradas no mar.",
       image:
-        "https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=800&auto=format&fit=crop",
+        `${images.foto37}`,
     },
     {
       name: "Bolsas",
       description: "Bolsas leves para praia, rotina e movimento.",
       image:
-        "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=800&auto=format&fit=crop",
+        `${images.foto34}`,
     },
     {
       name: "Camisetas",
       description: "Básicos confortáveis com identidade Fluxo Maré.",
       image:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
+        `${images.foto32}`,
     },
     {
       name: "Shorts",
       description: "Modelagens práticas para dias solares.",
       image:
-        "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=800&auto=format&fit=crop",
+        `${images.foto33}`,
     },
     {
       name: "Calças",
       description: "Peças fluidas para acompanhar todos os fluxos.",
       image:
-        "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop",
+        `${images.foto38}`,
     },
   ];
 
