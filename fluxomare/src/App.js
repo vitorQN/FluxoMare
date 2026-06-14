@@ -1,6 +1,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import * as images from "./assets/img";
+import Paralax from "./paralax.jsx";
+import './App.css';
 
 function App() {
   const collectionTrackRef = useRef(null);
@@ -75,7 +77,7 @@ function App() {
       price: "R$ 139,00",
       image:
         `${images.foto33}`,
-    },{
+    }, {
       name: "Maré",
       price: "R$ 149,00",
       image:
@@ -171,7 +173,7 @@ function App() {
               Fluxo Maré
             </h1>
             <p className="text-xs tracking-[0.3em] mt-1 text-[#90857d] uppercase">
-              design em movimento
+              tudo que flui encontra o oceano
             </p>
           </div>
 
@@ -368,6 +370,9 @@ function App() {
         </div>
       </section>
 
+      
+      <Paralax />
+
       {/* Catalogo */}
       <section id="catalogo">
         <div className="catalogo-header">
@@ -441,9 +446,8 @@ function App() {
       <section id="history">
         <div
           ref={historyContentRef}
-          className={`history-content scroll-fade-in ${
-            isHistoryContentVisible ? "is-visible" : ""
-          }`}
+          className={`history-content scroll-fade-in ${isHistoryContentVisible ? "is-visible" : ""
+            }`}
         >
           <p>
             nossa história

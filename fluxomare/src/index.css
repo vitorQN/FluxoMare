@@ -26,7 +26,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   font-weight: var(--font-weight-regular);
-  background: #f6f1eb;
+  background-color: #f1e9df;
   color: #5f5a56;
   scrollbar-width: thin;
   scrollbar-color: #b9aa9c #f6f1eb;
